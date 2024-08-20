@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="loading">
+        <!--------------------------------------------------------- Loader ---------------------------------------------------->
+        <div id="loader">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="200" height="200" style="shape-rendering: auto; display: block;">
+            <g transform="rotate(0 50 50)">
+              <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="4s" repeatCount="indefinite"></animateTransform>
+              <g transform="matrix(1,0,0,1,0,0)">
+                <g transform="rotate(0 50 50)">
+                  <path fill="rgb(0, 131, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(45 50 50)" fill="rgb(0, 139, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(90 50 50)" fill="rgb(0, 114, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(135 50 50)" fill="rgb(0, 120, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(180 50 50)" fill="rgb(0, 131, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(225 50 50)" fill="rgb(0, 139, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(270 50 50)" fill="rgb(0, 114, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                  <path transform="rotate(315 50 50)" fill="rgb(0, 120, 0)" d="M44.6,20.6c2.6,4.4,7,7.1,11.7,7.7c1.9-4.4,1.7-9.5-0.8-14c-2.6-4.4-7-7.1-11.7-7.7C41.9,11,42,16.2,44.6,20.6z"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      
+    <div class="page-wrapper">
+<!--------------------------------------------------------- Header ---------------------------------------------------->
+    <header class="header">
+        <div class="header-container container">
+            <a href="#" class="header-logo">
+                <span style="color: #3B5226;">MA</span><span>SA</span>
+           </a>
+           <button type="button" class="header-toggler js-header-toggler">
+              <span></span>
+           </button>
+           <nav class="header-menu js-header-menu">
+              <ul>
+                 <li><a href="#home" class="dash">Home</a></li>
+                 <li><a href="#about" class="dash">About</a></li>
+                 <li><a href="#performers" class="dash">Fest Committee</a></li>
+                 <li><a href="#schedule" class="dash">Schedule</a></li>
+                 <li><a href="team.html" target="_blank" class="dash">Groups</a></li>
+                 <li><a href="program.html" target="_blank" class="dash">programmes</a></li>
+                 <li><a href="score.html" target="_blank" class="dash">score</a></li>
+                 <li><a href="#contact" class="dash">Feedback</a></li>
+              </ul>
+           </nav>
+        </div>
+     </header>
+     <!--------------------------------------------------------- Home ---------------------------------------------------->
+    <section class="home">
+        <img src="assets/bush2.png"  id="local"class="bush2">
+        <img src="assets/logo2.png" class="title" >
+        <img src="assets/bush1.png"  id="local"class="bush1">
+        <img src="assets/leaf2.png"  id="local"class="leaf2">
+        <img src="assets/leaf1.png"  id="local"class="leaf1">
+    </section>
+    <!--------------------------------------------------------- About ---------------------------------------------------->
+    <section class="about" id="about">
+      <div class="container">
+         <div class="about-content">
+            <div class="section-header">
+               <h2 class="section-header-title">about</h2>
+            </div>
+            <div class="about-img-box">
+               <img
+                  src='assets/leaf.png'
+                  alt="img">
+            </div>
+            <div class="about-text">
+               <p>"മുഖ്യധാര" എന്നത് ചിലരുടെ മാത്രം കുത്തകയൊന്നുമല്ല. ഉൾക്കൊള്ളലിന്റെയും
+                   ഒരുമയുടെയും നാരുകളാണ് അവയെ തുന്നിചേർക്കുന്നത്. മറ്റുള്ളവരുടെ പ്രൊപ്പഗണ്ടകൾക്കപ്പുറം
+                    സ്വയം വാർത്തെടുത്ത വിചാരധാരകളെ പിന്തുടരലാണ് സംസ്കൃത സമൂഹത്തിന് അഭികാമ്യം.</p>
+
+               <p>നടന്നു  പരിചയിച്ച വഴികളിലൂടെ മാത്രം സഞ്ചരിക്കുന്നതൊന്നും ശ്രമകരമല്ല. 
+                  ലക്ഷ്യസ്ഥാനത്തേക്ക് വഴികൾ പലതുമുണ്ട്, നേർവഴികൾ തിരഞ്ഞെടുക്കുന്നത് മനുഷ്യന്റെ യുക്തി
+                   ബോധത്തിന്റെ പിൻബലത്തിലാണ്. മറ്റൊരു തലത്തിൽ പറഞ്ഞാൽ, അവഗണനകളോടും 
+                   ബഹിഷ്കരണങ്ങളോടും വരകളിലൂടെയും മൊഴികളിലൂടെയും കലഹിക്കലാണ് നമ്മുടെ ധാർമിക ദൗത്യം.</p>
+
+               <p>ഇതൊരു സർഗാത്മക പ്രതിരോധം കൂടിയാണ്. നമ്മളിവിടെ നടന്നുപോയതിന്റെ ശേഷിപ്പായി
+                   നമ്മുടെ പാദങ്ങളെ മണ്ണിൽ ആഴത്തിൽ പതിപ്പിക്കേണ്ടതുണ്ട്. പിന്തിരിപ്പന്മാരുടെ പരിഹാസ വാക്കുകളെക്കാൾ  മുന്നോട്ടുപോകുവാനുള്ള ഊർജ്ജം നൽകുന്ന ഒരു കൂട്ടായ പരിശ്രമം.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+   <!---------------------------------------------GUEST START------------------------------------------->
+   <section class="performers" id="performers">
+    <div class="container">
+       <div class="section-header">
+          <h2 class="section-header-title">fest committee</h2>
+       </div>
+       <div class="performers-items">
+          <!---------------------------------------------GUEST ITEM-1 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/cc9be296-13c6-4c48-b2e3-99eb4428582f/saleemust.png" alt="img"
+                >
+             <div class="performers-info">
+               <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Fest Controller</h3>
+                <div class="performers-job">Usthad Saleem wafy</div>
+             </div>
+          </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-1 END------------------------------------------->
+
+       <div class="performers-items2">
+          <!---------------------------------------------GUEST ITEM-2 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/d9bd4e32-b847-4fcf-99b9-b2cdbb02eb5f/waleed.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Chairman</h3>
+                <div class="performers-job">Waleed Edakkulam</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUESTS ITEM-2 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-3 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/e859bf7f-0d30-440f-8648-8e435a5519bc/althaf.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Gen. Convenor</h3>
+                <div class="performers-job">Althaf Padikkal</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-3 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-4 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/71841d64-3400-4fc7-82a4-78d32ef6dcd0/abukka.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Vice Chairman</h3>
+                <div class="performers-job">Aboobacker Kurumbathur</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-4 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-5 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/f53bc1ba-fa70-443a-9e98-394876b499c7/sahad.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Ass. Convenor</h3>
+                <div class="performers-job">Sahad Akalad</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-5 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-6 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/0b978302-8cd1-4a4d-906e-98aa6fb519fc/basith.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Media coordinator</h3>
+                <div class="performers-job">Basith Manoor</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-6 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-7 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/d79c4653-d7cf-408b-ab6b-d418b35545b1/idukki.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Convenor</h3>
+                <div class="performers-job">Basith Idukki</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-7 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-8 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/6b9d21a1-85a0-40c9-b447-58133bba945f/shamnad.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Convenor</h3>
+                <div class="performers-job">Shamnad Valanchery</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-8 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-9 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/be439c3b-ce05-478d-a83f-d2ff98675400/murshid.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Media Convenor</h3>
+                <div class="performers-job">Murshid Kainikkara</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-9 END------------------------------------------->
+          <!---------------------------------------------GUEST ITEM-10 START------------------------------------------->
+          <div class="performers-item">
+             <img src="https://ucarecdn.com/5a32d678-ea0d-4361-abfd-113839a1f037/faheem.png" alt="img"
+                >
+             <div class="performers-info">
+                <div class="performers-backdrop" ></div>
+                <h3 class="performers-name">Media Convenor</h3>
+                <div class="performers-job">Faheem Arippambra</div>
+             </div>
+          </div>
+          <!---------------------------------------------GUEST ITEM-10 END------------------------------------------->
+       </div>
+    </div>
+ </section>
+
+ <!---------------------------------------------SCHEDULE START------------------------------------------->
+ <section class="schedule" id="schedule">
+   <div class="container">
+      <div class="section-header schedule">
+         <h2 class="section-header-title" data-splitting data-aos="text-animation">Programmes schedule</h2>
+      </div>
+      <!---------------------------------------------ON/OFF STAGE BUTTON START------------------------------------------->
+      <div class="onoff-tabs" data-aos="fade-up">
+
+         <button type="button" class="schedule-tabe active js-schedule-tabe" onclick="showstage('offstage')">
+            OffStage
+         </button>
+         <button type="button" class="schedule-tabe js-schedule-tabe" onclick="showstage('onstage')">
+            OnStage
+         </button>
+      </div>
+      <!---------------------------------------------DAYS OFF STAGE BUTTON START------------------------------------------->
+      <div class="schedule-tabs" data-aos="fade-up" id="offstage">
+         <button type="button" id="arrow-left" class="arrow-btn"><i
+               class="fa-solid fa-chevron-left arr"></i></button>
+
+         <button type="button" data-target="#day-1" class="schedule-tab active js-schedule-tab">
+            Wednesday <span>24-01-2024</span>
+         </button>
+         <button type="button" data-target="#day-2" class="schedule-tab js-schedule-tab">
+            Thursday <span>25-01-2024</span>
+         </button>
+         <button type="button" data-target="#day-3" class="schedule-tab js-schedule-tab hidden">
+            Saturday <span>27-01-2024</span>
+         </button>
+         <button type="button" data-target="#day-4" class="schedule-tab js-schedule-tab hidden">
+            Sunday <span>28-01-2024</span>
+         </button>
+         <button type="button" data-target="#day-5" class="schedule-tab js-schedule-tab hidden">
+            Saturday <span>03-02-2024</span>
+         </button>
+         <button type="button" id="arrow-right" class="arrow-btn"><i
+            class="fa-solid fa-chevron-right arr"></i></button>
+   </div>
+   <!---------------------------------------------SCHEDULE TABLE-1 START------------------------------------------->
+   <div class="schedule-content" id="scheduleOffstage">
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-1 START------------------------------------------->
+      <table class="schedule-table active js-schedule-table" id="day-1" data-aos="fade-up">
+         <tr>
+            <th>time</th>
+            <th>category</th>
+            <th>stage-1</th>
+            <th>stage-2</th>
+         </tr>
+         <tr>
+            <td>12:00 - 01:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-1 END------------------------------------------->
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-2 START------------------------------------------->
+      <table class="schedule-table js-schedule-table" id="day-2">
+         <tr>
+            <th>time</th>
+            <th>category</th>
+            <th>Stage-1</th>
+            <th>Stage-2</th>
+         </tr>
+         <tr>
+            <td>12:00 - 01:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-2 END------------------------------------------->
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-3 START------------------------------------------->
+      <table class="schedule-table js-schedule-table" id="day-3">
+         <tr>
+            <th>time</th>
+            <th>category</th>
+            <th>Stage-1</th>
+            <th>Stage-2</th>
+         </tr>
+         <tr>
+            <td>12:00 - 01:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-3 END------------------------------------------->
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-4 START------------------------------------------->
+      <table class="schedule-table js-schedule-table" id="day-4">
+         <tr>
+            <th>time</th>
+            <th>category</th>
+            <th>Stage-1</th>
+            <th>Stage-2</th>
+         </tr>
+         <tr>
+            <td>12:00 - 01:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-4 END------------------------------------------->
+      <!---------------------------------------------SCHEDULE TABLE-1 DAY-5 START------------------------------------------->
+      <table class="schedule-table js-schedule-table" id="day-5">
+         <tr>
+            <th>time</th>
+            <th>category</th>
+            <th>Stage-1</th>
+            <th>Stage-2</th>
+         </tr>
+         <tr>
+            <td>12:00 - 01:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+         </tr>
+      </table>
+   </div>
+      <!---------------------------------------------DAYS ON STAGE BUTTON START------------------------------------------->
+      <div class="schedule-tabs" data-aos="fade-up" id="onstage">
+         <button type="button" id="arrow-left2" class="arrow-btn"><i
+            class="fa-solid fa-chevron-left arr"></i></button>
+
+         <button type="button" data-target="#onday-1" class="schedule2-tab active js-schedule2-tab">
+            Wednesday <span>22-05-2024</span>
+         </button>
+         <button type="button" data-target="#onday-2" class="schedule2-tab js-schedule2-tab">
+            Thursday <span>23-05-2024</span>
+         </button>
+         
+         <button type="button" id="arrow-right2" class="arrow-btn"><i
+            class="fa-solid fa-chevron-right arr"></i></button>
+      </div>
+
+      <div class="schedule-content" id="scheduleOnstage">
+         <!---------------------------------------------SCHEDULE TABLE-2 DAY-1 START------------------------------------------->
+         <table class="schedule2-table active js-schedule2-table" id="onday-1" data-aos="fade-up">
+            <tr>
+               <th>time</th>
+               <th>category</th>
+               <th>Stage-1</th>
+               <th>Stage-2</th>
+            </tr>
+            <tr>
+               <td>12:00 - 01:00</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </table>
+         <!---------------------------------------------SCHEDULE TABLE-2 DAY-1 END------------------------------------------->
+         <!---------------------------------------------SCHEDULE TABLE-2 DAY-2 START------------------------------------------->
+         <table class="schedule2-table js-schedule2-table" id="onday-2">
+            <tr>
+               <th>time</th>
+               <th>category</th>
+               <th>Stage-1</th>
+               <th>Stage-2</th>
+            </tr>
+            <tr>
+               <td>12:00 - 01:00</td>
+               <td></td>
+               <td></td>
+               <td></td>
+            </tr>
+         </table>
+      </div>
+      <!---------------------------------------------SCHEDULE TABLE-2 END------------------------------------------->
+   </div>
+</section>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1c93298b7e.js" crossorigin="anonymous"></script>
+</body>
+</html>
