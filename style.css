@@ -504,12 +504,12 @@ body.loading {
 }
 
 /* # schedule */
+.onoff-tabs {
+  text-align: center;
+}
 .schedule-tabs {
   text-align: center;
   display: none;
-}
-.onoff-tabs {
-  text-align: center;
 }
 
 .schedule-content {
@@ -521,7 +521,7 @@ body.loading {
   border: 1px solid var(--text-color);
   border-radius: 5px;
   padding: 5px 30px;
-  color: 16px;
+  color: var(--text-color);
   text-transform: uppercase;
   margin: 0 5px 10px;
   font-size: 16px;
@@ -547,7 +547,7 @@ body.loading {
   border: 1px solid var(--text-color);
   border-radius: 5px;
   padding: 5px 30px;
-  color: 16px;
+  color: var(--text-color);
   text-transform: uppercase;
   margin: 0 5px 10px;
   font-size: 16px;
@@ -557,15 +557,15 @@ body.loading {
 }
 
 .schedule-tab.active {
-  background-color: var(--main-color);
+  background-color: var(--local-color);
   border-color: var(--main-color);
 }
 .schedule-tabe.active {
-  background-color: var(--main-color);
+  background-color: var(--local-color);
   border-color: var(--main-color);
 }
 .schedule2-tab.active {
-  background-color: var(--main-color);
+  background-color: var(--local-color);
   border-color: var(--main-color);
 }
 
@@ -627,21 +627,23 @@ body.loading {
 }
 
 .schedule-table tr:nth-child(even){
-  background-color: var(--bg-light-yellow);
+  background-color: var(--local-color);
 }
 .schedule2-table tr:nth-child(even){
-  background-color: var(--bg-light-yellow);
+  background-color: var(--local-color);
 }
 
 .schedule-table td,
 .schedule-table th{
   padding: 10px;
+  color: var(--text-color);
   text-align: center;
   text-transform: capitalize;
 }
 .schedule2-table td,
 .schedule2-table th{
   padding: 10px;
+  color: var(--text-color);
   text-align: center;
   text-transform: capitalize;
 }
@@ -674,8 +676,8 @@ body.loading {
 /* Add a new class for arrow buttons */
 .arrow-btn {
   cursor: pointer;
-  color: var(--main-color);
+  color: var(--local-color);
   border: none;
-  background-color: var(--bg-x-light-yellow);
+  background-color: var(--main-color);
   font-size: 20px;
 }
