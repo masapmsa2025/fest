@@ -449,9 +449,9 @@ body.loading {
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .home .title {
-    width: 300px;
+    width: 400px;
   }
 
   .leaf1,
@@ -541,6 +541,7 @@ body.loading {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   align-items: center;
+  margin-top: 30px;
 }
 
 .performers-item {
@@ -549,22 +550,10 @@ body.loading {
 
 .performers-info {
   padding: 5px 10px;
-  position: absolute;
   left: 20px;
   right: 20px;
-  bottom: -5px;
+  bottom: -20px;
   z-index: 1;
-}
-
-.performers-backdrop {
-  position: absolute;
-  background: var(--local-color);
-  left: 0;
-  top: 0;
-  border-radius: 10% 10% 50% 50%;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
 }
 
 .performers-name {
@@ -771,6 +760,11 @@ body.loading {
   .schedule-table td,
   .schedule-table th{
     font-size: 10px;
+  }
+
+  .schedule-tab,
+  .schedule2-tab {
+    padding: 5px 20px;
   }
 }
 @media(max-width: 575px){
