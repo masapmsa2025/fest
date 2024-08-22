@@ -438,6 +438,51 @@ body.loading {
   pointer-events: none;
 }
 
+.bush1 ,.bush2 {
+  animation: moveUp 1.5s ease-out forwards;
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.leaf1 {
+  animation: moveInFromLeft 2s ease-out forwards;
+}
+
+.leaf2 {
+  animation: moveInFromRight 2s ease-out forwards;
+}
+
+@keyframes moveInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .home .title {
   position: absolute;
   top: 50%;
@@ -447,6 +492,23 @@ body.loading {
   color: white;
   font-size: 80px;
   text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  animation: Float 4s ease-in-out infinite;
+  
+}
+
+@keyframes Float{
+  0%{
+    transform: translate(-50%, -50%);
+      
+  }
+  50%{
+    transform: translate(-50%, -60%);
+      
+  }
+  100%{
+    transform: translate(-50%, -50%);
+      
+  }
 }
 
 @media (max-width: 600px) {
@@ -487,6 +549,10 @@ body.loading {
   max-width: 400;
   margin: auto;
   position: relative;
+}
+
+.about-img-box img {
+  border-radius: 20%;
 }
 
 .about-btn {
@@ -541,7 +607,6 @@ body.loading {
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   align-items: center;
-  margin-top: 30px;
 }
 
 .performers-item {
@@ -560,14 +625,14 @@ body.loading {
   color: var(--text-color);
   text-transform: capitalize;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 17px;
   text-align: center;
 }
 
 .performers-job {
   text-transform: capitalize;
   color: var(--text-color);
-  font-size: 10px;
+  font-size: 13px;
   text-align: center;
 }
 
@@ -590,17 +655,17 @@ body.loading {
     padding: 2px 3px;
     left: 8px;
     bottom: -5px;
-    width: 90%;
+    width: 100%;
   }
 }
 
 @media(max-width: 499px) {
   .performers-name {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .performers-job {
-    font-size: 7px;
+    font-size: 9px;
   }
 }
 
