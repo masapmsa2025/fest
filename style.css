@@ -18,6 +18,7 @@ html {
 
 body {
   background-color: var(--main-color);
+  font-family: 'poppins', sans-serif;
 }
 
 * {
@@ -279,7 +280,7 @@ body.loading {
   width: 100%;
   z-index: 10;
   padding: 18px 18px;
-  background-color: transparent;
+  background-color: var(--local-color);
 }
 
 .header-container {
@@ -398,7 +399,7 @@ body.loading {
   .header-menu {
     position: fixed;
     width: 250px;
-    background-color: transparent;
+    background-color: var(--local-color);
     top: 0;
     right: 0;
     height: 100%;
@@ -456,24 +457,6 @@ body.loading {
   .leaf1,
   .leaf2 {
     margin-bottom: 300px;
-  }
-
-  .leaf1 {
-    min-width: 180%;
-  }
-
-  .leaf2 {
-    min-height: 47%;
-  }
-
-  .bush2 {
-    min-height: 54%;
-    min-width: 500px;
-  }
-
-  .bush1 {
-    min-height: 44%;
-    min-width: 500px;
   }
 
   .about {
@@ -543,21 +526,19 @@ body.loading {
   padding: 80px 0;
 }
 
-.performers-items {
-  max-width: 250px;
-  margin: auto;
-  margin-bottom: 10px;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-  align-items: center;
-}
-
 .performers-items2 {
-  max-width: 800px;
+  max-width: 700px;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+}
+.performers-items1 {
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   align-items: center;
 }
@@ -580,6 +561,7 @@ body.loading {
   background: var(--local-color);
   left: 0;
   top: 0;
+  border-radius: 10% 10% 50% 50%;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -595,20 +577,19 @@ body.loading {
 
 .performers-job {
   text-transform: capitalize;
+  color: var(--text-color);
   font-size: 10px;
   text-align: center;
 }
 
 @media(max-width: 575px) {
-  .performers-items {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    margin-bottom: 0;
-    max-width: 170px;
-  }
-
+  
   .performers-items2 {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .performers-items1 {
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
 
