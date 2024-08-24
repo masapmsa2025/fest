@@ -919,7 +919,7 @@ body.loading {
   border-bottom: 1px solid var(--text-color);
   font-size: 16px;
   font-family: inherit;
-  color: var(--local-color);
+  color: var(--text-color);
 }
 
 .contact-form .input:focus{

@@ -471,8 +471,8 @@
                         <div class="error-text">Name can't be blank</div>
                      </div>
                      <div class="input-box">
-                        <input type="tel" placeholder="Phone" class="input" id="phone">
-                        <div class="error-text">Phone can't be blank</div>
+                        <input type="email" placeholder="Email" class="input" id="email">
+                        <div class="error-text">Email can't be blank</div>
                      </div>
                   </div>
                   <div class="input-box">
@@ -480,10 +480,10 @@
                      <div class="error-text">Subject can't be blank</div>
                   </div>
                   <div class="input-box">
-                     <textarea placeholder="Feedback" class="input input-message" id="textarea"></textarea>
+                     <textarea placeholder="Feedback" class="input input-message" id="message"></textarea>
                      <div class="error-text">Feedback can't be blank</div>
                   </div>
-                  <button class="btn" type="button">
+                  <button class="btn" type="button" onclick="sendMessage()">
                      Send Feedback
                      <div class="icon-1">
                         <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
@@ -547,7 +547,7 @@
    </div>
    <script src="script.js"></script>
    <script src="https://kit.fontawesome.com/1c93298b7e.js" crossorigin="anonymous"></script>
-   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

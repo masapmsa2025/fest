@@ -1,5 +1,5 @@
 //Loader
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     const loader = document.getElementById('loader');
     document.body.classList.remove('loading');
     loader.style.display = 'none';
@@ -11,10 +11,10 @@ const leaf1 = document.querySelector('.leaf1')
 const leaf2 = document.querySelector('.leaf2')
 const bush2 = document.querySelector('.bush2')
 
-document.addEventListener('scroll', function() {
+document.addEventListener('scroll', function () {
     let value = window.scrollY
     title.style.marginTop = value * 1.1 + 'px'
-    
+
     leaf1.style.marginLeft = -value + 'px'
     leaf2.style.marginLeft = value + 'px'
 
@@ -45,7 +45,7 @@ headerMenu();
 
 //schedule tabs
 // JavaScript to handle arrow button clicks
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const tabsContainer = document.querySelector('.schedule-tabs');
     const tabs = document.querySelectorAll('.js-schedule-tab');
     const arrowLeft = document.getElementById('arrow-left');
@@ -65,13 +65,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Event listener for left arrow click
-    arrowLeft.addEventListener('click', function() {
+    arrowLeft.addEventListener('click', function () {
         currentIndex = Math.max(0, currentIndex - 1);
         toggleTabs();
     });
 
     // Event listener for right arrow click
-    arrowRight.addEventListener('click', function() {
+    arrowRight.addEventListener('click', function () {
         currentIndex = Math.min(tabs.length - 2, currentIndex + 1);
         toggleTabs();
     });
@@ -346,7 +346,7 @@ fetch(FULL_URL)
     });
 //////////////////////////////////////////////ON STAGE DATA///////////////////////////////////////////////////////////
 // JavaScript to handle arrow button clicks
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const tabsContainer = document.querySelector('.schedule-tabs');
     const tabs = document.querySelectorAll('.js-schedule2-tab');
     const arrowLeft2 = document.getElementById('arrow-left2');
@@ -366,13 +366,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Event listener for left arrow click
-    arrowLeft2.addEventListener('click', function() {
+    arrowLeft2.addEventListener('click', function () {
         currentIndex = Math.max(0, currentIndex - 1);
         toggleTabs();
     });
 
     // Event listener for right arrow click
-    arrowRight2.addEventListener('click', function() {
+    arrowRight2.addEventListener('click', function () {
         currentIndex = Math.min(tabs.length - 2, currentIndex + 1);
         toggleTabs();
     });
@@ -504,3 +504,64 @@ function scheduleTabs2() {
     });
 }
 scheduleTabs2();
+function checkinputs() {
+    const items = document.querySelectorAll(".input");
+
+    for (const item of items) {
+        if (item.value == "") {
+            item.classList.add('error');
+            item.parentElement.classList.add('error');
+        }
+
+        item.addEventListener("keyup", () => {
+            if (item.value != "") {
+                item.classList.remove("error");
+                item.parentElement.classList.remove("error");
+            }
+            else {
+                item.classList.add("error");
+                item.parentElement.classList.add("error");
+            }
+        });
+    }
+
+}
+
+function sendMessage() {
+    checkinputs();
+    const form = document.querySelector('form');
+    const fullName = document.getElementById('name');
+    const phone = document.getElementById('email');
+    const sub = document.getElementById('subject');
+    const text = document.getElementById('message');
+
+    if (!fullName.classList.contains("error") && !phone.classList.contains("error") && !sub.classList.contains("error") && !text.classList.contains("error")) {
+        (function () {
+            emailjs.init('c5bIev_sFULKR0TmQ');
+        })();
+
+        var serviceID = 'service_dxp6m5c';
+        var templateID = 'template_k2d00n4';
+
+        var params = {
+            sendername: document.querySelector('#name').value,
+            senderemail: document.querySelector('#email').value,
+            subject: document.querySelector('#subject').value,
+            message: document.querySelector('#message').value,
+        }
+
+        emailjs.send(serviceID, templateID, params)
+            .then(res => {
+                Swal.fire({
+                    title: "Thank You!",
+                    text: "Feedback send successfully!",
+                    icon: "success"
+                });
+            })
+            .catch();
+
+        form.reset();
+        return false;
+    }
+
+}
