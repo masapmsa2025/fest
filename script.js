@@ -240,7 +240,7 @@ fetch(FULL_URL)
         table.deleteRow(1)
 
     })
-SHEET_RANGE = 'F14:H19';
+SHEET_RANGE = 'F14:H20';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
@@ -292,7 +292,7 @@ fetch(FULL_URL)
         table.deleteRow(1)
 
     })
-SHEET_RANGE = 'A25:C26';
+SHEET_RANGE = 'A25:C27';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
@@ -318,7 +318,7 @@ fetch(FULL_URL)
         table.deleteRow(1)
 
     });
-SHEET_RANGE = 'F25:H30';
+SHEET_RANGE = 'F25:H33';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
