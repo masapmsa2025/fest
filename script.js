@@ -1,8 +1,6 @@
 //Loader
 window.addEventListener('load', function () {
-    const loader = document.getElementById('loader');
     document.body.classList.remove('loading');
-    loader.style.display = 'none';
 });
 
 //Parallax
