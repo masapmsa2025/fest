@@ -117,10 +117,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const [programName, category, place, name, group, grade] = row;
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${place}</td>
-                <td>${name}</td>
-                <td>${group}</td>
-                <td>${grade}</td>
+                <td data-label="Place">${place}</td>
+                <td data-label="Name">${name}</td>
+                <td data-label="Group">${group}</td>
+                <td data-label="Grade">${grade}</td>
             `;
             resultTableBody.appendChild(tr);
         });

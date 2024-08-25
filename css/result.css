@@ -8,7 +8,6 @@ body {
 }
 
 .groups {
-    width: 82vw;
     text-align: center;
     padding: 4rem 0;
 }
@@ -61,18 +60,24 @@ main.table {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.553);
     padding: 0 .8rem;
-    border-radius: 2rem;
+    border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: .2s;
 }
+
+#result-dropdown option {
+    font-size: 1rem;
+    background-color: #d5d1defe;
+}
+
 .table__header .input-group {
     width: 40%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.553);
     padding: 0 .8rem;
-    border-radius: 2rem;
+    border-radius: 3px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,19 +131,19 @@ main.table {
     visibility: visible;
 }
 
-table {
+#program-table {
     width: 100%;
 }
 
-table,
-th,
-td {
+#program-table,
+#program-table th,
+#program-table td {
     border-collapse: separate;
     padding: 1rem;
     text-align: center;
 }
 
-thead th {
+#program-table thead th {
     position: sticky;
     top: 0;
     left: 0;
@@ -147,25 +152,25 @@ thead th {
     text-transform: capitalize;
 }
 
-tbody tr:nth-child(even) {
+#program-table tbody tr:nth-child(even) {
     background-color: #0000000b;
 }
 
-tbody tr {
+#program-table tbody tr {
     --delay: .1s;
     transition: .5s ease-in-out var(--delay), background-color 0s;
 }
 
-tbody tr:hover {
+#program-table tbody tr:hover {
     background-color: #fff6 !important;
 }
 
-tbody tr td {
+#program-table tbody tr td {
     transition: .2s ease-in-out;
 }
 
 @media (max-width: 1000px) {
-    td:not(:first-of-type) {
+    #program-table td:not(:first-of-type) {
         min-width: 4.1rem;
     }
 
@@ -174,12 +179,12 @@ tbody tr td {
     }
 }
 
-thead th:hover {
+#program-table thead th:hover {
     color: #6c00bd;
 }
 
-thead th.active,
-tbody td.active {
+#program-table thead th.active,
+#program-table tbody td.active {
     color: #6c00bd;
 }
 
@@ -217,3 +222,83 @@ tbody td.active {
     text-decoration: none;
     cursor: pointer;
 }
+
+#modal-program-name {
+    color: black;
+}
+
+#result-table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  #result-table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  #result-table th,
+  #result-table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  #result-table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #result-table {
+      border: 0;
+    }
+  
+    #result-table caption {
+      font-size: 1.3em;
+    }
+    
+    #result-table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    #result-table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    #result-table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    #result-table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    #result-table td:last-child {
+      border-bottom: 0;
+    }
+  }
