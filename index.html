@@ -4,7 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Parallax Website</title>
+   <title>Pachamme Tottoli</title>
    <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +15,7 @@
          height="200" style="shape-rendering: auto; display: block;">
          <g transform="rotate(0 50 50)">
             <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="4s"
-               repeatCount="indefinite"></animateTransform>
+               repeatCount="indefinite" begin="0s"></animateTransform> <!-- Added 'begin="0s"' -->
             <g transform="matrix(1,0,0,1,0,0)">
                <g transform="rotate(0 50 50)">
                   <path fill="rgb(0, 131, 0)"
@@ -79,6 +79,8 @@
          <img src="assets/bush1.png" id="local" class="bush1">
          <img src="assets/leaf2.png" id="local" class="leaf2">
          <img src="assets/leaf1.png" id="local" class="leaf1">
+         <img src="assets/leaf2g.png" id="local" class="leafg2">
+         <img src="assets/leaf1g.png" id="local" class="leafg1">
       </section>
       <!--------------------------------------------------------- About ---------------------------------------------------->
       <section class="about" id="about">

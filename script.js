@@ -1,10 +1,15 @@
 //Loader
+window.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('loading');
+});
+
 window.addEventListener('load', function () {
     document.body.classList.remove('loading');
 });
-
 //Parallax
 const title = document.querySelector('.title')
+const leafg1 = document.querySelector('.leafg1')
+const leafg2 = document.querySelector('.leafg2')
 const leaf1 = document.querySelector('.leaf1')
 const leaf2 = document.querySelector('.leaf2')
 const bush2 = document.querySelector('.bush2')
@@ -13,6 +18,8 @@ document.addEventListener('scroll', function () {
     let value = window.scrollY
     title.style.marginTop = value * 1.1 + 'px'
 
+    leafg1.style.marginLeft = -value + 'px'
+    leafg2.style.marginLeft = value + 'px'
     leaf1.style.marginLeft = -value + 'px'
     leaf2.style.marginLeft = value + 'px'
 

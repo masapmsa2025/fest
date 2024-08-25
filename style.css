@@ -464,12 +464,16 @@ body:not(.loading) #loader svg {
   }
 }
 
-.leaf1 {
+.leafg1 , .leaf1 {
   animation: moveInFromLeft 2s ease-out forwards;
 }
 
-.leaf2 {
+.leafg2 , .leaf2 {
   animation: moveInFromRight 2s ease-out forwards;
+}
+
+.leaf1 , .leaf2 {
+  display: none;
 }
 
 @keyframes moveInFromLeft {
@@ -530,6 +534,12 @@ body:not(.loading) #loader svg {
   .leaf1,
   .leaf2 {
     margin-bottom: 300px;
+    display: block;
+  }
+
+  .leafg1,
+  .leafg2 {
+    display: none;
   }
 
   .about {
