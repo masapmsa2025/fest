@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Fest Results</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/result.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-container container">
+                <a href="#" class="header-logo">
+                    <span>MA</span><span>SA</span>
+                </a>
+                <button type="button" class="header-toggler js-header-toggler">
+                    <span></span>
+                </button>
+                <nav class="header-menu js-header-menu">
+                    <ul>
+                        <li><a href="#home" class="dash">Home</a></li>
+                        <li><a href="#about" class="dash">About</a></li>
+                        <li><a href="#performers" class="dash">Fest Committee</a></li>
+                        <li><a href="#schedule" class="dash">Schedule</a></li>
+                        <li><a href="team.html" class="dash">Groups</a></li>
+                        <li><a href="results.html" class="dash">Results</a></li>
+                        <li><a href="score.html" class="dash">score</a></li>
+                        <li><a href="#contact" class="dash">Feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Logo and Heading -->      
+        <section class="groups">
+            <img src="assets/logo2.png" alt="logo">
+            <h1 class="groups__heading">Result Shows Here..</h1>
+        </section>
+        
+        <!-- Program Table -->
+        <main class="table">
+            <section class="table__header">
+                <select id="result-dropdown">
+                    <option value="all">All</option>
+                    <option value="aliya">Result Aliya</option>
+                    <option value="thamheediyya">Result Thamheediyya</option>
+                    <option value="general">Result General</option>
+                </select>
+                <div class="input-group">
+                    <input type="text" id="search-bar" placeholder="Search by Program Name">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </section>
+            <section class="table__body">
+                <table id="program-table">
+                    <thead>
+                        <tr>
+                            <th>Program Name</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- google sheet data appears here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- Modal -->
+        <section>
+            <div id="result-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h2 id="modal-program-name"></h2>
+                    <table id="result-table">
+                        <thead>
+                            <tr>
+                                <th>Place</th>
+                                <th>Name</th>
+                                <th>Group</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Results will be dynamically populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <!---------------------------------------------FOOTER START------------------------------------------->
+        <footer class="footer">
+            <div class="footer-container container">
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/pmsawafy" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/wafypmsa/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@munthajulafnanstudentsasso6980" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    Designed by <a href="https://mohdshuhaib.github.io/shuhaibcv/">Shuhaib</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/result.js"></script>
+    <script src="https://kit.fontawesome.com/1c93298b7e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
