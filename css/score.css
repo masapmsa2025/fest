@@ -1,60 +1,12 @@
-:root {
-  --main-color: #f6ab06;
-
-  /* text colors */
-  --text-dark-gray: hsl(0, 0%, 100%);
-  --text-x-dark-gray: hsl(0, 0%, 10%);
-  --text-black: hsl(0, 0%, 0%);
-
-  /* bg colors */
-  --bg-white: #FFFFFF;
-  --bg-light-yellow: hsl(42, 26%, 77%);
-  --bg-x-light-yellow: hsl(42, 40%, 87%);
-  --bg-green: hsl(167, 57%, 52%);
-  --bg-purple: hsl(253, 79%, 77%);
-
-  /* border colors */
-  --border-dark: hsla(0, 0%, 0%, 0.1);
-  --border-x-dark: hsla(0, 0%, 0%, 0.7);
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;0,800;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--bg-white);
-  color: var(--text-black);
-}
-
-::before,
-::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --cardwidth: 300px;
-  --cardheight: 150px;
-  --bgwidth: 288px;
-  --bgheight: 238px;
-  --section-p: 80px;
-}
-
 .card-mng {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+}
+
+.last-section {
+  margin-bottom: 20px;
 }
 
 /* card area */
@@ -65,16 +17,18 @@ body {
   width: 100%;
   max-width: 1200px;
   box-sizing: border-box;
+  margin-top: 10px;
 }
 
 .card {
-  background-color: white;
+  background-color: var(--local-color);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 .image-container {
@@ -107,7 +61,7 @@ body {
 
 .team-score {
   font-size: 16px;
-  color: #555;
+  color: var(--text-color);
 }
 
 .card:hover .image-container img {
@@ -132,12 +86,11 @@ body {
   border-radius: 8px;
   border-width: 2px;
   box-sizing: border-box;
-  color: var(--text-black);
-  background-color: var(--bg-white);
-  border-color: var(--text-black);
+  color: var(--text-color);
+  background-color: var(--local-color);
+  border-color: var(--text-color);
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
   height: 56px;
   justify-content: center;
   line-height: 1;
@@ -181,9 +134,9 @@ body {
 }
 
 .active-b {
-  color: var(--text-black);
-  background-color: var(--main-color);
-  border-color: var(--text-black);
+  color: var(--black-text);
+  background-color: var(--text-color);
+  border-color: var(--black-text);
 
 }
 
@@ -209,7 +162,7 @@ table {
   border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  color: var(--text-black);
+  color: var(--text-color);
 }
 
 .table-div {
@@ -220,7 +173,7 @@ table {
 table {
   border-spacing: 1;
   border-collapse: collapse;
-  background: var(--bg-x-light-yellow);
+  background: var(--local-color);
   border-radius: 6px;
   overflow: hidden;
   max-width: 1100px;
@@ -240,13 +193,14 @@ table {
 
   thead tr {
     height: 60px;
-    background: var(--main-color);
+    background: var(--text-color);
     font-size: 16px;
+    color: var(--black-text);
   }
 
   tbody tr {
     height: 48px;
-    border-bottom: 1px solid var(--text-black);
+    border-bottom: 1px solid var(--text-color);
 
     &:last-child {
       border: 0;
