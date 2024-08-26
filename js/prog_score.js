@@ -20,7 +20,7 @@ function headerMenu() {
 }
 headerMenu();
 
-let SHEET_ID = '1DIhqV07i3VzCBswPr_byOXX53A4oSsKUqZQJHOTNiek';
+let SHEET_ID = '1czaTMcUeVrUa435utQrGutTOJuY4asHFzrHLcNkCtjI';
 let SHEET_TITLE = 'score';
 let SHEET_RANGE = 'A1:D2';
 
@@ -55,12 +55,11 @@ fetch(FULL_URL)
 
     for (let i = 0; i < length; i++ ) {
          
-        var newRow = table.insertRow();// insert rows
-
+        var newRow = table.insertRow();// insert rows      
         var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
         var cell2 = newRow.insertCell(1);
         var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3);
+        var cell4 = newRow.insertCell(3); 
         var cell5 = newRow.insertCell(4);
 
         cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells

@@ -39,7 +39,7 @@
 
 .image-container img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
   border-radius: 5px;
@@ -51,17 +51,17 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100px;
+  min-width: 100px;
+}
+
+.card-content div {
+  color: var(--text-color);
 }
 
 .leader-name {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.team-score {
-  font-size: 16px;
-  color: var(--text-color);
 }
 
 .card:hover .image-container img {
@@ -188,7 +188,7 @@ table {
   td,
   th {
     padding-left: 8px;
-    font-size: 11px;
+    font-size: 18px;
   }
 
   thead tr {
@@ -251,7 +251,14 @@ table {
   table {
     margin-left: 10px;
     margin-right: 10px;
+
+    td,
+    th {
+      padding-left: 8px;
+      font-size: 10px;
+    }
   }
+
 }
 
 /* tv section */
