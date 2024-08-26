@@ -262,7 +262,7 @@ table {
 }
 
 /* tv section */
-@media (min-width : 1700px) {
+/* @media (min-width : 1700px) {
   .our {
     width: 15%;
     height: 80%;
@@ -274,7 +274,6 @@ table {
     justify-content: center;
     align-items: center;
     padding: 0 5%;
-    /* Adjust padding as needed */
   }
 
   .container {
@@ -306,9 +305,7 @@ table {
     user-select: none;
     font-size: 1.5dvw;
     background-color: var(--main-color);
-    /* Enhance table header visibility */
     color: var(--text-black);
-    /* Enhance table header visibility */
   }
 
   table td {
@@ -329,4 +326,4 @@ table {
     margin-left: auto;
     margin-right: auto;
   }
-}
+} */
