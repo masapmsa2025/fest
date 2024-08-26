@@ -1,0 +1,371 @@
+:root {
+  --main-color: #f6ab06;
+
+  /* text colors */
+  --text-dark-gray: hsl(0, 0%, 100%);
+  --text-x-dark-gray: hsl(0, 0%, 10%);
+  --text-black: hsl(0, 0%, 0%);
+
+  /* bg colors */
+  --bg-white: #FFFFFF;
+  --bg-light-yellow: hsl(42, 26%, 77%);
+  --bg-x-light-yellow: hsl(42, 40%, 87%);
+  --bg-green: hsl(167, 57%, 52%);
+  --bg-purple: hsl(253, 79%, 77%);
+
+  /* border colors */
+  --border-dark: hsla(0, 0%, 0%, 0.1);
+  --border-x-dark: hsla(0, 0%, 0%, 0.7);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;0,800;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-white);
+  color: var(--text-black);
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cardwidth: 300px;
+  --cardheight: 150px;
+  --bgwidth: 288px;
+  --bgheight: 238px;
+  --section-p: 80px;
+}
+
+.card-mng {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+/* card area */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  overflow: hidden;
+  /* Ensures the image stays within the card's border */
+  padding: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.leader-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.team-score {
+  font-size: 16px;
+  color: #555;
+}
+
+.card:hover .image-container img {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 740px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    flex-direction: row;
+  }
+}
+
+/* button section start */
+.button {
+  align-items: center;
+  appearance: none;
+  border-radius: 8px;
+  border-width: 2px;
+  box-sizing: border-box;
+  color: var(--text-black);
+  background-color: var(--bg-white);
+  border-color: var(--text-black);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 56px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.button:focus {
+  outline: none;
+
+}
+
+.button:hover {
+
+  transform: translateY(-2px);
+}
+
+.button:active {
+
+  transform: translateY(2px);
+}
+
+.buttons-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.active-b {
+  color: var(--text-black);
+  background-color: var(--main-color);
+  border-color: var(--text-black);
+
+}
+
+/* button section ends */
+
+#al-stage {
+  display: none;
+}
+
+#gn-stage {
+  display: none;
+}
+
+/* table section start */
+table,
+td,
+th {
+  border: 1px solid;
+}
+
+table {
+  width: 90dvw;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-black);
+}
+
+.table-div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: var(--bg-x-light-yellow);
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+  position: relative;
+
+  * {
+    position: relative
+  }
+
+  td,
+  th {
+    padding-left: 8px;
+    font-size: 11px;
+  }
+
+  thead tr {
+    height: 60px;
+    background: var(--main-color);
+    font-size: 16px;
+  }
+
+  tbody tr {
+    height: 48px;
+    border-bottom: 1px solid var(--text-black);
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  td,
+  th {
+    text-align: left;
+
+    &.l {
+      text-align: right
+    }
+
+    &.c {
+      text-align: center
+    }
+
+    &.r {
+      text-align: center
+    }
+  }
+}
+
+#aliya {
+  display: none;
+}
+
+#general {
+  display: none;
+}
+
+#tb-th-off {
+  display: none;
+}
+
+#tb-al-on,
+#tb-al-off {
+  display: none;
+}
+
+#tb-gn-on,
+#tb-gn-off {
+  display: none;
+}
+
+@media (max-width : 600px) {
+  table {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* tv section */
+@media (min-width : 1700px) {
+  .our {
+    width: 15%;
+    height: 80%;
+  }
+
+  .card-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    /* Adjust padding as needed */
+  }
+
+  .container {
+    max-width: 95dvw;
+    margin: 0;
+  }
+
+  .button {
+    height: 7dvh;
+    font-size: 1.3dvw;
+    margin: 8px;
+  }
+
+  .buttons-div {
+    margin: 10px 0 5px 0;
+  }
+
+  .table-div {
+    width: 90dvw;
+    margin-left: 5dvw;
+  }
+
+  table {
+    max-width: -webkit-fill-available;
+    border-radius: 12px;
+  }
+
+  table th {
+    user-select: none;
+    font-size: 1.5dvw;
+    background-color: var(--main-color);
+    /* Enhance table header visibility */
+    color: var(--text-black);
+    /* Enhance table header visibility */
+  }
+
+  table td {
+    user-select: none;
+    font-size: 1.3dvw;
+  }
+
+  table thead tr {
+    height: 7dvh;
+  }
+
+  table tbody tr {
+    height: 6dvh;
+  }
+
+  th,
+  td {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

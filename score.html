@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Fest Scores</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/score.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header-container container">
+                <a href="#" class="header-logo">
+                    <span>MA</span><span>SA</span>
+                </a>
+                <button type="button" class="header-toggler js-header-toggler">
+                    <span></span>
+                </button>
+                <nav class="header-menu js-header-menu">
+                    <ul>
+                        <li><a href="index.html" class="dash">Home</a></li>
+                        <li><a href="index.html#about" class="dash">About</a></li>
+                        <li><a href="index.html#performers" class="dash">Fest Committee</a></li>
+                        <li><a href="#schedule" class="dash">Schedule</a></li>
+                        <li><a href="result.html" class="dash">Results</a></li>
+                        <li><a href="score.html" class="dash">score</a></li>
+                        <li><a href="index.html#contact" class="dash">Feedback</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    <section class="card-mng">
+        <!---------------------------------------------TOTAL POINT START------------------------------------------->
+        <div class="cards-container">
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/ajmel1.png" alt="Leader 1">
+                </div>
+                <div class="card-content">
+                    <div class="team-name1"></div>
+                    <div class="score1"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/ajmel2.png" alt="Leader 2">
+                </div>
+                <div class="card-content">
+                    <div class="team-name2"></div>
+                    <div class="score2"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/ajmel3.png" alt="Leader 3">
+                </div>
+                <div class="card-content">
+                    <div class="assets/jawhar.png"></div>
+                    <div class="score3"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="image-container">
+                    <img src="assets/ajmel4.png" alt="Leader 4">
+                </div>
+                <div class="card-content">
+                    <div class="team-name4"></div>
+                    <div class="score4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------TOTAL POINT END------------------------------------------->
+
+    <!---------------------------------------------SCORE SHOW BUTTON START------------------------------------------->
+    <section>
+        <div class="buttons-div">
+            <div class="category">
+                <button id="th-score-btn" class="button active-b" onclick="thScoreBtn()">TH</button>
+                <button id="al-score-btn" class="button" onclick="alScoreBtn()">AL</button>
+                <button id="gn-score-btn" class="button" onclick="gnScoreBtn()">GN</button>
+            </div>
+            <div id="th-stage" class="stage">
+                <button id="btn-th-on" class="button active-b" onclick="thOnBtn()">ONSTAGE</button>
+                <button id="btn-th-off" class="button" onclick="thOffBtn()">OFFSTAGE</button>
+            </div>
+            <div id="al-stage" class="stage">
+                <button id="btn-al-on" class="button active-b" onclick="alOnBtn()">ONSTAGE</button>
+                <button id="btn-al-off" class="button" onclick="alOffBtn()">OFFSTAGE</button>
+            </div>
+            <div id="gn-stage" class="stage">
+                <button id="btn-gn-on" class="button active-b" onclick="gnOnBtn()">ONSTAGE</button>
+                <button id="btn-gn-off" class="button" onclick="gnOffBtn()">OFFSTAGE</button>
+            </div>
+        </div>
+        <!---------------------------------------------SCORE SHOW BUTTON END------------------------------------------->
+        <!---------------------------------------------ALL TEAM SCORE START------------------------------------------->
+        <div class="tables-div">
+            <!---------------------------------------------TH ON STAGE SCORE START------------------------------------------->
+            <div id="tb-th-on" class="table-div">
+                <table id="th-onstage">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Group - 1</th>
+                            <th>Group - 2</th>
+                            <th>Group - 3</th>
+                            <th>Group - 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Qira'ath</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---------------------------------------------TH OFF STAGE SCORE END------------------------------------------->
+            <!---------------------------------------------TH ON STAGE SCORE START------------------------------------------->
+            <div id="tb-th-off" class="table-div">
+                <table id="th-offstage">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Apollonia</th>
+                            <th>Carthage</th>
+                            <th>Delos</th>
+                            <th>Bosphorus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Essay Malayalam</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---------------------------------------------TH ON STAGE SCORE END------------------------------------------->
+            <!---------------------------------------------AL OFF STAGE SCORE START------------------------------------------->
+            <div id="tb-al-off" class="table-div">
+                <table id="al-offstage">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Apollonia</th>
+                            <th>Carthage</th>
+                            <th>Delos</th>
+                            <th>Bosphorus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Essay Malayalam</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---------------------------------------------AL OFF STAGE SCORE END------------------------------------------->
+            <!---------------------------------------------AL ON STAGE SCORE START------------------------------------------->
+            <div id="tb-al-on" class="table-div">
+                <table id="al-onstage">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Apollonia</th>
+                            <th>Carthage</th>
+                            <th>Delos</th>
+                            <th>Bosphorus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Qira'ath</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---------------------------------------------AL ON STAGE SCORE END------------------------------------------->
+            <!---------------------------------------------GEN ON STAGE SCORE START------------------------------------------->
+            <div id="tb-gn-on" class="table-div">
+                <table id="gn-onstage">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Apollonia</th>
+                            <th>Carthage</th>
+                            <th>Delos</th>
+                            <th>Bosphorus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Kaviyarang</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---------------------------------------------GEN ON STAGE SCORE END------------------------------------------->
+            <!---------------------------------------------GEN OFF STAGE SCORE START------------------------------------------->
+            <div id="tb-gn-off" class="table-div">
+                <table id="gn-offstage">
+                    <thead>
+                        <tr>
+                            <th>Programme</th>
+                            <th>Apollonia</th>
+                            <th>Carthage</th>
+                            <th>Delos</th>
+                            <th>Bosphorus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Song Writing</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!---------------------------------------------GEN OFF STAGE SCORE END------------------------------------------->
+        </div>
+        <!---------------------------------------------ALL TEAM SCORE END------------------------------------------->
+    </section>
+    <!---------------------------------------------FOOTER START------------------------------------------->
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/pmsawafy" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/wafypmsa/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@munthajulafnanstudentsasso6980" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+            <div class="footer-copyright">
+                Designed by <a href="https://mohdshuhaib.github.io/shuhaibcv/">Shuhaib</a>
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="js/prog_score.js"></script>
+    <script src="https://kit.fontawesome.com/1c93298b7e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
