@@ -73,7 +73,7 @@ fetch(FULL_URL)
 })
 
 SHEET_TITLE = 'th_off';
-SHEET_RANGE = 'A1:E17';
+SHEET_RANGE = 'A1:E20';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
 
 fetch(FULL_URL)
@@ -105,7 +105,7 @@ fetch(FULL_URL)
 
 })
 SHEET_TITLE = 'al_on';
-SHEET_RANGE = 'A1:E23';
+SHEET_RANGE = 'A1:E22';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
 
 fetch(FULL_URL)
@@ -137,7 +137,7 @@ fetch(FULL_URL)
 
 })
 SHEET_TITLE = 'al_off';
-SHEET_RANGE = 'A1:E25';
+SHEET_RANGE = 'A1:E29';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
 
 fetch(FULL_URL)
@@ -169,7 +169,7 @@ fetch(FULL_URL)
 
 })
 SHEET_TITLE = 'gn_on';
-SHEET_RANGE = 'A1:E9';
+SHEET_RANGE = 'A1:E7';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
 
 fetch(FULL_URL)
@@ -201,7 +201,7 @@ fetch(FULL_URL)
 
 })
 SHEET_TITLE = 'gn_off';
-SHEET_RANGE = 'A1:E6';
+SHEET_RANGE = 'A1:E9';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
 
 fetch(FULL_URL)
