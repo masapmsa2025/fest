@@ -386,7 +386,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleTabs();
 });
 
-SHEET_RANGE = 'P2:S6';
+SHEET_RANGE = 'A38:C40';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
@@ -404,17 +404,17 @@ fetch(FULL_URL)
             var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
             var cell2 = newRow.insertCell(1);
             var cell3 = newRow.insertCell(2);
-            var cell4 = newRow.insertCell(3);
+        
 
             cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
             cell2.innerHTML = data.table.rows[i].c[1].v;
             cell3.innerHTML = data.table.rows[i].c[2].v;
-            cell4.innerHTML = data.table.rows[i].c[3].v;
+        
         }
         table.deleteRow(1)
 
     })
-SHEET_RANGE = 'U2:X10';
+SHEET_RANGE = 'E38:G40';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
@@ -432,17 +432,15 @@ fetch(FULL_URL)
             var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
             var cell2 = newRow.insertCell(1);
             var cell3 = newRow.insertCell(2);
-            var cell4 = newRow.insertCell(3);
 
             cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
             cell2.innerHTML = data.table.rows[i].c[1].v;
             cell3.innerHTML = data.table.rows[i].c[2].v;
-            cell4.innerHTML = data.table.rows[i].c[3].v;
         }
         table.deleteRow(1)
 
     })
-SHEET_RANGE = 'Z2:AC4';
+SHEET_RANGE = 'I38:K40';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
@@ -460,16 +458,93 @@ fetch(FULL_URL)
             var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
             var cell2 = newRow.insertCell(1);
             var cell3 = newRow.insertCell(2);
-            var cell4 = newRow.insertCell(3);
 
             cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
             cell2.innerHTML = data.table.rows[i].c[1].v;
             cell3.innerHTML = data.table.rows[i].c[2].v;
-            cell4.innerHTML = data.table.rows[i].c[3].v;
         }
         table.deleteRow(1)
 
     })
+SHEET_RANGE = 'A46:C46';
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
+    
+    fetch(FULL_URL)
+        .then(res => res.text())
+        .then(rep => {
+            let data = JSON.parse(rep.substr(47).slice(0, -2));
+            let length = data.table.rows.length;//total number of values
+    
+            var table = document.getElementById('onday-4');// table selector
+    
+            for (let i = 0; i < length; i++) {
+    
+                var newRow = table.insertRow();// insert rows
+    
+                var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
+                var cell2 = newRow.insertCell(1);
+                var cell3 = newRow.insertCell(2);
+    
+                cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
+                cell2.innerHTML = data.table.rows[i].c[1].v;
+                cell3.innerHTML = data.table.rows[i].c[2].v;
+            }
+            table.deleteRow(1)
+    
+        })
+        SHEET_RANGE = 'E46:G47';
+        FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
+        
+        fetch(FULL_URL)
+            .then(res => res.text())
+            .then(rep => {
+                let data = JSON.parse(rep.substr(47).slice(0, -2));
+                let length = data.table.rows.length;//total number of values
+        
+                var table = document.getElementById('onday-5');// table selector
+        
+                for (let i = 0; i < length; i++) {
+        
+                    var newRow = table.insertRow();// insert rows
+        
+                    var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
+                    var cell2 = newRow.insertCell(1);
+                    var cell3 = newRow.insertCell(2);
+        
+                    cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
+                    cell2.innerHTML = data.table.rows[i].c[1].v;
+                    cell3.innerHTML = data.table.rows[i].c[2].v;
+                }
+                table.deleteRow(1)
+        
+            })
+            SHEET_RANGE = 'I46:K47';
+            FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
+            
+            fetch(FULL_URL)
+                .then(res => res.text())
+                .then(rep => {
+                    let data = JSON.parse(rep.substr(47).slice(0, -2));
+                    let length = data.table.rows.length;//total number of values
+            
+                    var table = document.getElementById('onday-6');// table selector
+            
+                    for (let i = 0; i < length; i++) {
+            
+                        var newRow = table.insertRow();// insert rows
+            
+                        var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
+                        var cell2 = newRow.insertCell(1);
+                        var cell3 = newRow.insertCell(2);
+            
+                        cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
+                        cell2.innerHTML = data.table.rows[i].c[1].v;
+                        cell3.innerHTML = data.table.rows[i].c[2].v;
+                    }
+                    table.deleteRow(1)
+            
+                })
+            
 /* schedule tabs */
 
 function scheduleTabs() {
