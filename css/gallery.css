@@ -148,37 +148,3 @@ section ul li.active {
   font-size: 50px;
   cursor: pointer;
 }
-
-.download-btn {
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 3px 40px;
-  background-color: #3def40;
-  color: #333;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-
-}
-
-@media (max-width : 600px) {
-  .download-btn {
-    bottom: 60px;
-  }
-}
-@media (max-width: 480px) {
-  .download-btn {
-    bottom: 100px;
-  }
-}
-@media (max-width: 360px) {
-  .download-btn {
-    bottom: 155px;
-  }
-}

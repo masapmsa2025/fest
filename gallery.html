@@ -37,129 +37,14 @@
     </header>
     <section class="gallery-head">
       <ul>
-        <li class="list active" data-filter="all">All</li>
-        <li class="list" data-filter="on">Programme</li>
-        <!-- <li class="list" data-filter="guest">Guest</li> -->
-        <li class="list" data-filter="other">Other</li>
+        <li onclick="filterImages('all')">All</li>
+        <li onclick="filterImages('on')">Programme</li>
+        <!-- <li onclick="filterImages('guest')">Guest</li> -->
+        <li onclick="filterImages('other')">Other</li>
       </ul>
     </section>
-    <div class="grid-gallery">
+    <div class="grid-gallery" id="gallery">
 
-      <!---------------------------------------------------------GUEST START-------------------------------------------------------->
-
-      <!-- <div class="grid-item guest">
-      <img src="https://ucarecdn.com/52e4c0ee-84c0-4b3b-8750-52696ab7d781/guest1.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/ab3e788a-8f60-421b-a872-6e7e5ea2ce91/guest2.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/d2b9bf5f-f14d-445f-9cfc-9b8d9d1e9b45/guest3.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/be2a2098-fd66-4e77-af60-12e14423c682/guest4.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/9f210428-cceb-4a39-b0a8-f0f19dc7a97a/guest5.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/4a00f71b-4c26-42f0-8657-56108bb0506a/guest6.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/21216ddc-e092-4db9-95e7-caddce7d82f7/guest7.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/03e611ff-1d81-4ab1-a9dd-34d043ff40dd/guest8.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/0f90305e-6095-4690-bca2-c551f2a15cfb/guest10.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/08083a2a-b5b5-450f-bb4b-0076c06d70c1/guest18.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/8de910cc-a917-4f2d-9ae1-57db013201ac/guest11.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/2e8bc974-1ca5-4525-8f71-6103e396bd71/guest19.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/333a4e5a-eff2-42fc-b410-8907e26dcb1d/guest13.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/27d94b4e-5455-44c0-93ec-0b4f430d439c/guest14.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/91a5d05d-2868-4908-a0bf-de2825c45bd8/guest15.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/0726897c-04a1-4d40-9b3e-088506ccaed9/guest16.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/817a0622-14e5-4a22-8988-b980d424cdd5/guest17.JPG">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/e1894a80-9dc5-4dbd-933d-3730e6f18287/guest18.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/b7fed32a-d08e-4c21-8487-53ce00f7eb39/guest19.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/80af59c3-13d7-4ab9-8f73-2d6d21469647/guest20.jpg">
-    </div>
-    <div class="grid-item guest">
-      <img src="https://ucarecdn.com/ae1617af-3378-48f2-b0ee-2e8d4f0019c9/guest21.jpg">
-    </div> -->
-      <!---------------------------------------------------------GUEST END-------------------------------------------------------->
-      <!---------------------------------------------------------PROGRAMME START-------------------------------------------------------->
-
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img1.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img2.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img3.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img4.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img5.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img6.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img7.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img8.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img9.jpeg?raw=true">
-      </div>
-      <div class="grid-item on">
-        <img src="https://github.com/masapmsa2025/CDNimages/blob/main/img10.jpeg?raw=true">
-      </div>
-
-      <!---------------------------------------------------------PROGRAMME END-------------------------------------------------------->
-      <!---------------------------------------------------------OTHER START-------------------------------------------------------->
-
-      <div class="grid-item other">
-        <img src="https://ucarecdn.com/bb3847d2-8e42-448c-86af-08caf45fec00/fs1.jpg">
-      </div>
-      <div class="grid-item other">
-        <img src="https://ucarecdn.com/7d531316-63a5-4416-9232-e2872455d365/pothuway999.jpg">
-      </div>
-      <div class="grid-item other">
-        <img src="https://ucarecdn.com/0e283040-ba07-45bb-b71e-436f438d3c6a/pothuWay.png">
-      </div>
-      <div class="grid-item other">
-        <img src="https://ucarecdn.com/1ac21532-d230-4d42-a171-24b56f6541c6/post2.jpeg">
-      </div>
-      <!---------------------------------------------------------OTHER STAGE END-------------------------------------------------------->
     </div>
     <!---------------------------------------------FOOTER START------------------------------------------->
     <footer class="footer">
@@ -182,12 +67,6 @@
     <div class="lightbox">
       <span class="close-btn">&times;</span>
       <img class="lightbox-img" src="">
-      <a class="download-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
-          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg></a>
     </div>
   </div>
   <!---------------------------------------------IMAGE ZOOMING,CLOSE & DOWNLOAD BTN START------------------------------------------->
