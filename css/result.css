@@ -235,34 +235,34 @@ main.table {
     width: 100%;
     table-layout: fixed;
   }
-  
+
   #result-table tr {
     background-color: #f8f8f8;
     border: 1px solid #ddd;
     padding: .35em;
   }
-  
+
   #result-table th,
   #result-table td {
     padding: .625em;
     text-align: center;
   }
-  
+
   #result-table th {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
   }
-  
+
   @media screen and (max-width: 600px) {
     #result-table {
       border: 0;
     }
-  
+
     #result-table caption {
       font-size: 1.3em;
     }
-    
+
     #result-table thead {
       border: none;
       clip: rect(0 0 0 0);
@@ -273,20 +273,20 @@ main.table {
       position: absolute;
       width: 1px;
     }
-    
+
     #result-table tr {
       border-bottom: 3px solid #ddd;
       display: block;
       margin-bottom: .625em;
     }
-    
+
     #result-table td {
       border-bottom: 1px solid #ddd;
       display: block;
       font-size: .8em;
       text-align: right;
     }
-    
+
     #result-table td::before {
       /*
       * aria-label has no advantage, it won't be read inside a table
@@ -297,8 +297,23 @@ main.table {
       font-weight: bold;
       text-transform: uppercase;
     }
-    
+
     #result-table td:last-child {
       border-bottom: 0;
     }
   }
+
+  @media (min-width: 1600px) {
+    main.table {
+        height: auto; /* Allow the table to take its full height */
+    }
+
+    .table__body {
+        max-height: none; /* Disable the height limit */
+        overflow: visible; /* Show all data without scrolling */
+    }
+
+    body {
+        max-height: unset;
+    }
+}
