@@ -6,6 +6,33 @@ window.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('load', function () {
     document.body.classList.remove('loading');
 });
+//Active class
+const sections = document.querySelectorAll('.auto');
+const navLinks = document.querySelectorAll('.dash');
+
+const removeActiveClasses = () => {
+  navLinks.forEach(link => link.classList.remove('open'));
+};
+
+// Create an IntersectionObserver to observe each section
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id;
+      removeActiveClasses();
+
+      const activeLink = document.querySelector(`a[href="#${id}"]`);
+      console.log(activeLink);
+      activeLink.classList.add('open');
+    }
+  });
+}, {
+  threshold: 0.5, // Trigger when 50% of the section is in view
+});
+
+// Observe each section
+sections.forEach(section => observer.observe(section));
+
 //Parallax
 const title = document.querySelector('.title')
 const leafg1 = document.querySelector('.leafg1')
@@ -404,12 +431,11 @@ fetch(FULL_URL)
             var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
             var cell2 = newRow.insertCell(1);
             var cell3 = newRow.insertCell(2);
-        
 
             cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
             cell2.innerHTML = data.table.rows[i].c[1].v;
             cell3.innerHTML = data.table.rows[i].c[2].v;
-        
+
         }
         table.deleteRow(1)
 
@@ -468,83 +494,83 @@ fetch(FULL_URL)
     })
 SHEET_RANGE = 'A46:C46';
 FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
-    
+
     fetch(FULL_URL)
         .then(res => res.text())
         .then(rep => {
             let data = JSON.parse(rep.substr(47).slice(0, -2));
             let length = data.table.rows.length;//total number of values
-    
+
             var table = document.getElementById('onday-4');// table selector
-    
+
             for (let i = 0; i < length; i++) {
-    
+
                 var newRow = table.insertRow();// insert rows
-    
+
                 var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
                 var cell2 = newRow.insertCell(1);
                 var cell3 = newRow.insertCell(2);
-    
+
                 cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
                 cell2.innerHTML = data.table.rows[i].c[1].v;
                 cell3.innerHTML = data.table.rows[i].c[2].v;
             }
             table.deleteRow(1)
-    
+
         })
         SHEET_RANGE = 'E46:G47';
         FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
-        
+
         fetch(FULL_URL)
             .then(res => res.text())
             .then(rep => {
                 let data = JSON.parse(rep.substr(47).slice(0, -2));
                 let length = data.table.rows.length;//total number of values
-        
+
                 var table = document.getElementById('onday-5');// table selector
-        
+
                 for (let i = 0; i < length; i++) {
-        
+
                     var newRow = table.insertRow();// insert rows
-        
+
                     var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
                     var cell2 = newRow.insertCell(1);
                     var cell3 = newRow.insertCell(2);
-        
+
                     cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
                     cell2.innerHTML = data.table.rows[i].c[1].v;
                     cell3.innerHTML = data.table.rows[i].c[2].v;
                 }
                 table.deleteRow(1)
-        
+
             })
             SHEET_RANGE = 'I46:K47';
             FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
-            
+
             fetch(FULL_URL)
                 .then(res => res.text())
                 .then(rep => {
                     let data = JSON.parse(rep.substr(47).slice(0, -2));
                     let length = data.table.rows.length;//total number of values
-            
+
                     var table = document.getElementById('onday-6');// table selector
-            
+
                     for (let i = 0; i < length; i++) {
-            
+
                         var newRow = table.insertRow();// insert rows
-            
+
                         var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
                         var cell2 = newRow.insertCell(1);
                         var cell3 = newRow.insertCell(2);
-            
+
                         cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
                         cell2.innerHTML = data.table.rows[i].c[1].v;
                         cell3.innerHTML = data.table.rows[i].c[2].v;
                     }
                     table.deleteRow(1)
-            
+
                 })
-            
+
 /* schedule tabs */
 
 function scheduleTabs() {
