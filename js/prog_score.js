@@ -26,7 +26,7 @@ let SHEET_RANGE = 'A1:D2';
 
 let FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
-let Render = "srender";
+let Render = "render";
 
 fetch(FULL_URL)
     .then(res => res.text())
@@ -44,10 +44,10 @@ fetch(FULL_URL)
             document.getElementById('score4').innerHTML = data.table.rows[0].c[3].v;
 
         } else {
-            document.getElementById('score1').innerHTML = "Rendering...";
-            document.getElementById('score2').innerHTML = "Rendering...";
-            document.getElementById('score3').innerHTML = "Rendering...";
-            document.getElementById('score4').innerHTML = "Rendering...";
+            document.getElementById('score1').innerHTML = "Loading....";
+            document.getElementById('score2').innerHTML = "Loading....";
+            document.getElementById('score3').innerHTML = "Loading....";
+            document.getElementById('score4').innerHTML = "Loading....";
         }
     })
     .catch(err => console.error('Error fetching data:', err));
