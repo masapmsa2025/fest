@@ -164,6 +164,8 @@
   z-index: 9999;
   opacity: 1;
   transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 body.loading {
@@ -175,8 +177,21 @@ body:not(.loading) #loader {
   pointer-events: none;
 }
 
-body:not(.loading) #loader svg {
+body:not(.loading) #loader img {
   display: block;
+}
+
+#message {
+  font-size: 16px;
+  margin-top: 10px;
+  color: black; /* Adjust the color if needed */
+}
+
+#countdown {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: black; /* Adjust the color if needed */
 }
 
 /* HOME */

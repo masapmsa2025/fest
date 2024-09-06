@@ -1,11 +1,47 @@
-//Loader
+// Timer variables
+let countdownValue = 3;
+const countdownElement = document.getElementById('countdown');
+let pageLoaded = false; // Variable to track if the page has fully loaded
+
+// Function to start countdown
+function startCountdown() {
+  countdownElement.innerText = countdownValue;  // Set initial value
+  const interval = setInterval(() => {
+    countdownValue -= 1; // Decrease countdown by 1
+
+    if (countdownValue > 0) {
+      countdownElement.innerText = countdownValue;
+    } else {
+      // Countdown finished
+      clearInterval(interval); // Stop countdown when it reaches 0
+
+      if (!pageLoaded) {
+        // If the page is not fully loaded, show the message
+        countdownElement.innerText = "Page should load soon...";
+      } else {
+        // If page is already loaded, hide the loader immediately
+        document.body.classList.remove('loading');
+      }
+    }
+  }, 1000); // Every 1 second
+}
+
+// Loader logic when DOM is loaded
 window.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('loading');
+    startCountdown(); // Start countdown as soon as the DOM is ready
 });
 
-window.addEventListener('load', function () {
-    document.body.classList.remove('loading');
+// Check if the page is fully loaded
+window.addEventListener('load', function() {
+    pageLoaded = true; // Mark the page as fully loaded
+
+    // If the countdown is finished, remove the loader immediately
+    if (countdownValue <= 0) {
+        document.body.classList.remove('loading');
+    }
 });
+
 //Active class
 const sections = document.querySelectorAll('.auto');
 const navLinks = document.querySelectorAll('.dash');
