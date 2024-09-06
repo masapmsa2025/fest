@@ -24,214 +24,225 @@ let SHEET_ID = '1czaTMcUeVrUa435utQrGutTOJuY4asHFzrHLcNkCtjI';
 let SHEET_TITLE = 'score';
 let SHEET_RANGE = 'A1:D2';
 
-let FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+let FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
+
+let Render = "srender";
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2)); //to get the data only
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
 
-    document.getElementById('team-name1').innerHTML = data.table.cols[0].label;//team name changing
-    document.getElementById('team-name2').innerHTML = data.table.cols[1].label;
-    document.getElementById('team-name3').innerHTML = data.table.cols[2].label;
-    document.getElementById('team-name4').innerHTML = data.table.cols[3].label;
-    document.getElementById('score1').innerHTML = data.table.rows[0].c[0].v;//team score changing
-    document.getElementById('score2').innerHTML = data.table.rows[0].c[1].v;
-    document.getElementById('score3').innerHTML = data.table.rows[0].c[2].v;
-    document.getElementById('score4').innerHTML = data.table.rows[0].c[3].v;
-})
+        document.getElementById('team-name1').innerHTML = data.table.cols[0].label;
+        document.getElementById('team-name2').innerHTML = data.table.cols[1].label;
+        document.getElementById('team-name3').innerHTML = data.table.cols[2].label;
+        document.getElementById('team-name4').innerHTML = data.table.cols[3].label;
+        if (Render === "render") {
+            document.getElementById('score1').innerHTML = data.table.rows[0].c[0].v;
+            document.getElementById('score2').innerHTML = data.table.rows[0].c[1].v;
+            document.getElementById('score3').innerHTML = data.table.rows[0].c[2].v;
+            document.getElementById('score4').innerHTML = data.table.rows[0].c[3].v;
+
+        } else {
+            document.getElementById('score1').innerHTML = "Rendering...";
+            document.getElementById('score2').innerHTML = "Rendering...";
+            document.getElementById('score3').innerHTML = "Rendering...";
+            document.getElementById('score4').innerHTML = "Rendering...";
+        }
+    })
+    .catch(err => console.error('Error fetching data:', err));
 
 SHEET_TITLE = 'th_on';
 SHEET_RANGE = 'A1:E20';
-FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let length = data.table.rows.length;//total number of values
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
+        let length = data.table.rows.length;//total number of values
 
-    var table = document.getElementById('th-onstage');// table selector
+        var table = document.getElementById('th-onstage');// table selector
 
-    for (let i = 0; i < length; i++ ) {
-         
-        var newRow = table.insertRow();// insert rows      
-        var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3); 
-        var cell5 = newRow.insertCell(4);
+        for (let i = 0; i < length; i++) {
 
-        cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
-        cell2.innerHTML = data.table.rows[i].c[1].v;
-        cell3.innerHTML = data.table.rows[i].c[2].v;
-        cell4.innerHTML = data.table.rows[i].c[3].v;
-        cell5.innerHTML = data.table.rows[i].c[4].v; 
-    }
-    table.deleteRow(1)
+            var newRow = table.insertRow();// insert rows
+            var cell1 = newRow.insertCell(0);//inserting colums/cells to above row
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
 
-})
+            cell1.innerHTML = data.table.rows[i].c[0].v;// setting value to the above cells
+            cell2.innerHTML = data.table.rows[i].c[1].v;
+            cell3.innerHTML = data.table.rows[i].c[2].v;
+            cell4.innerHTML = data.table.rows[i].c[3].v;
+            cell5.innerHTML = data.table.rows[i].c[4].v;
+        }
+        table.deleteRow(1)
+
+    })
 
 SHEET_TITLE = 'th_off';
 SHEET_RANGE = 'A1:E20';
-FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let length = data.table.rows.length;
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
+        let length = data.table.rows.length;
 
-    var table = document.getElementById('th-offstage');
+        var table = document.getElementById('th-offstage');
 
-    for (let i = 0; i < length; i++ ) {
-         
-        var newRow = table.insertRow();
+        for (let i = 0; i < length; i++) {
 
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3);
-        var cell5 = newRow.insertCell(4);
+            var newRow = table.insertRow();
 
-        cell1.innerHTML = data.table.rows[i].c[0].v;
-        cell2.innerHTML = data.table.rows[i].c[1].v;
-        cell3.innerHTML = data.table.rows[i].c[2].v;
-        cell4.innerHTML = data.table.rows[i].c[3].v;
-        cell5.innerHTML = data.table.rows[i].c[4].v; 
-        
-    }
-    table.deleteRow(1)
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
 
-})
+            cell1.innerHTML = data.table.rows[i].c[0].v;
+            cell2.innerHTML = data.table.rows[i].c[1].v;
+            cell3.innerHTML = data.table.rows[i].c[2].v;
+            cell4.innerHTML = data.table.rows[i].c[3].v;
+            cell5.innerHTML = data.table.rows[i].c[4].v;
+
+        }
+        table.deleteRow(1)
+
+    })
 SHEET_TITLE = 'al_on';
 SHEET_RANGE = 'A1:E22';
-FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let length = data.table.rows.length;
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
+        let length = data.table.rows.length;
 
-    var table = document.getElementById('al-onstage');
+        var table = document.getElementById('al-onstage');
 
-    for (let i = 0; i < length; i++ ) {
-         
-        var newRow = table.insertRow();
+        for (let i = 0; i < length; i++) {
 
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3);
-        var cell5 = newRow.insertCell(4);
+            var newRow = table.insertRow();
 
-        cell1.innerHTML = data.table.rows[i].c[0].v;
-        cell2.innerHTML = data.table.rows[i].c[1].v;
-        cell3.innerHTML = data.table.rows[i].c[2].v;
-        cell4.innerHTML = data.table.rows[i].c[3].v;
-        cell5.innerHTML = data.table.rows[i].c[4].v; 
-        
-    }
-    table.deleteRow(1)
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
 
-})
+            cell1.innerHTML = data.table.rows[i].c[0].v;
+            cell2.innerHTML = data.table.rows[i].c[1].v;
+            cell3.innerHTML = data.table.rows[i].c[2].v;
+            cell4.innerHTML = data.table.rows[i].c[3].v;
+            cell5.innerHTML = data.table.rows[i].c[4].v;
+
+        }
+        table.deleteRow(1)
+
+    })
 SHEET_TITLE = 'al_off';
 SHEET_RANGE = 'A1:E29';
-FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let length = data.table.rows.length;
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
+        let length = data.table.rows.length;
 
-    var table = document.getElementById('al-offstage');
+        var table = document.getElementById('al-offstage');
 
-    for (let i = 0; i < length; i++ ) {
-         
-        var newRow = table.insertRow();
+        for (let i = 0; i < length; i++) {
 
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3);
-        var cell5 = newRow.insertCell(4);
+            var newRow = table.insertRow();
 
-        cell1.innerHTML = data.table.rows[i].c[0].v;
-        cell2.innerHTML = data.table.rows[i].c[1].v;
-        cell3.innerHTML = data.table.rows[i].c[2].v;
-        cell4.innerHTML = data.table.rows[i].c[3].v;
-        cell5.innerHTML = data.table.rows[i].c[4].v; 
-        
-    }
-    table.deleteRow(1)
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
 
-})
+            cell1.innerHTML = data.table.rows[i].c[0].v;
+            cell2.innerHTML = data.table.rows[i].c[1].v;
+            cell3.innerHTML = data.table.rows[i].c[2].v;
+            cell4.innerHTML = data.table.rows[i].c[3].v;
+            cell5.innerHTML = data.table.rows[i].c[4].v;
+
+        }
+        table.deleteRow(1)
+
+    })
 SHEET_TITLE = 'gn_on';
 SHEET_RANGE = 'A1:E7';
-FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let length = data.table.rows.length;
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
+        let length = data.table.rows.length;
 
-    var table = document.getElementById('gn-onstage');
+        var table = document.getElementById('gn-onstage');
 
-    for (let i = 0; i < length; i++ ) {
-         
-        var newRow = table.insertRow();
+        for (let i = 0; i < length; i++) {
 
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3);
-        var cell5 = newRow.insertCell(4);
+            var newRow = table.insertRow();
 
-        cell1.innerHTML = data.table.rows[i].c[0].v;
-        cell2.innerHTML = data.table.rows[i].c[1].v;
-        cell3.innerHTML = data.table.rows[i].c[2].v;
-        cell4.innerHTML = data.table.rows[i].c[3].v;
-        cell5.innerHTML = data.table.rows[i].c[4].v; 
-        
-    }
-    table.deleteRow(1)
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
 
-})
+            cell1.innerHTML = data.table.rows[i].c[0].v;
+            cell2.innerHTML = data.table.rows[i].c[1].v;
+            cell3.innerHTML = data.table.rows[i].c[2].v;
+            cell4.innerHTML = data.table.rows[i].c[3].v;
+            cell5.innerHTML = data.table.rows[i].c[4].v;
+
+        }
+        table.deleteRow(1)
+
+    })
 SHEET_TITLE = 'gn_off';
 SHEET_RANGE = 'A1:E9';
-FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE );
+FULL_URL = ('https://docs.google.com/spreadsheets/d/' + SHEET_ID + '/gviz/tq?sheet=' + SHEET_TITLE + '&range=' + SHEET_RANGE);
 
 fetch(FULL_URL)
-.then(res => res.text())
-.then(rep => {
-    let data = JSON.parse(rep.substr(47).slice(0, -2));
-    let length = data.table.rows.length;
+    .then(res => res.text())
+    .then(rep => {
+        let data = JSON.parse(rep.substr(47).slice(0, -2));
+        let length = data.table.rows.length;
 
-    var table = document.getElementById('gn-offstage');
+        var table = document.getElementById('gn-offstage');
 
-    for (let i = 0; i < length; i++ ) {
-         
-        var newRow = table.insertRow();
+        for (let i = 0; i < length; i++) {
 
-        var cell1 = newRow.insertCell(0);
-        var cell2 = newRow.insertCell(1);
-        var cell3 = newRow.insertCell(2);
-        var cell4 = newRow.insertCell(3);
-        var cell5 = newRow.insertCell(4);
+            var newRow = table.insertRow();
 
-        cell1.innerHTML = data.table.rows[i].c[0].v;
-        cell2.innerHTML = data.table.rows[i].c[1].v;
-        cell3.innerHTML = data.table.rows[i].c[2].v;
-        cell4.innerHTML = data.table.rows[i].c[3].v;
-        cell5.innerHTML = data.table.rows[i].c[4].v; 
-        
-    }
-    table.deleteRow(1)
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            var cell4 = newRow.insertCell(3);
+            var cell5 = newRow.insertCell(4);
 
-})
+            cell1.innerHTML = data.table.rows[i].c[0].v;
+            cell2.innerHTML = data.table.rows[i].c[1].v;
+            cell3.innerHTML = data.table.rows[i].c[2].v;
+            cell4.innerHTML = data.table.rows[i].c[3].v;
+            cell5.innerHTML = data.table.rows[i].c[4].v;
+
+        }
+        table.deleteRow(1)
+
+    })
 
 function aliya() {
     // show hide table
@@ -248,9 +259,9 @@ function aliya() {
     var albt = document.getElementById('albutton');
     var gnbt = document.getElementById('gnbutton');
 
-    if(thbt.classList.contains('active-b')){
+    if (thbt.classList.contains('active-b')) {
         thbt.classList.remove('active-b');
-    }else if (gnbt.classList.contains('active-b')){
+    } else if (gnbt.classList.contains('active-b')) {
         gnbt.classList.remove('active-b');
     }
     albt.classList.add('active-b')
@@ -269,10 +280,10 @@ function thdy() {
     var thbt = document.getElementById('thbutton');
     var albt = document.getElementById('albutton');
     var gnbt = document.getElementById('gnbutton');
-    
-    if(albt.classList.contains('active-b')){
+
+    if (albt.classList.contains('active-b')) {
         albt.classList.remove('active-b');
-    }else if (gnbt.classList.contains('active-b')){
+    } else if (gnbt.classList.contains('active-b')) {
         gnbt.classList.remove('active-b');
     }
     thbt.classList.add('active-b')
@@ -291,16 +302,16 @@ function general() {
     var thbt = document.getElementById('thbutton');
     var albt = document.getElementById('albutton');
     var gnbt = document.getElementById('gnbutton');
-    
-    if(thbt.classList.contains('active-b')){
+
+    if (thbt.classList.contains('active-b')) {
         thbt.classList.remove('active-b');
-    }else if (albt.classList.contains('active-b')){
+    } else if (albt.classList.contains('active-b')) {
         albt.classList.remove('active-b');
     }
     gnbt.classList.add('active-b')
 }
 
-function hideAllTables() { 
+function hideAllTables() {
     // function for hiding all tables
     var tb_th_on = document.getElementById('tb-th-on');
     var tb_th_off = document.getElementById('tb-th-off');
@@ -317,7 +328,7 @@ function hideAllTables() {
     tb_gn_off.style.display = 'none';
 }
 
-function thScoreBtn(){
+function thScoreBtn() {
     // show the off/on-stage butttons for thamheediyya
     var thStage = document.getElementById('th-stage');
     var alStage = document.getElementById('al-stage');
@@ -326,15 +337,15 @@ function thScoreBtn(){
     thStage.style.display = 'flex';
     alStage.style.display = 'none';
     gnStage.style.display = 'none';
-    
+
     // color change for the active button among th/al/gn
     var thStageBtn = document.getElementById('th-score-btn');
     var alStageBtn = document.getElementById('al-score-btn');
     var gnStageBtn = document.getElementById('gn-score-btn');
 
-    if(gnStageBtn.classList.contains('active-b')){
+    if (gnStageBtn.classList.contains('active-b')) {
         gnStageBtn.classList.remove('active-b');
-    }else if (alStageBtn.classList.contains('active-b')){
+    } else if (alStageBtn.classList.contains('active-b')) {
         alStageBtn.classList.remove('active-b');
     }
     thStageBtn.classList.add('active-b')
@@ -344,7 +355,7 @@ function thScoreBtn(){
     hideAllTables();
     tbth.style.display = "flex"
 }
-function alScoreBtn(){
+function alScoreBtn() {
     // show the off/on-stage butttons for aliya
     var thStage = document.getElementById('th-stage');
     var alStage = document.getElementById('al-stage');
@@ -359,9 +370,9 @@ function alScoreBtn(){
     var alStageBtn = document.getElementById('al-score-btn');
     var gnStageBtn = document.getElementById('gn-score-btn');
 
-    if(gnStageBtn.classList.contains('active-b')){
+    if (gnStageBtn.classList.contains('active-b')) {
         gnStageBtn.classList.remove('active-b');
-    }else if (thStageBtn.classList.contains('active-b')){
+    } else if (thStageBtn.classList.contains('active-b')) {
         thStageBtn.classList.remove('active-b');
     }
     alStageBtn.classList.add('active-b')
@@ -371,7 +382,7 @@ function alScoreBtn(){
     hideAllTables();
     tbal.style.display = "flex"
 }
-function gnScoreBtn(){
+function gnScoreBtn() {
     // show the off/on-stage butttons for general
     var thStage = document.getElementById('th-stage');
     var alStage = document.getElementById('al-stage');
@@ -386,9 +397,9 @@ function gnScoreBtn(){
     var alStageBtn = document.getElementById('al-score-btn');
     var gnStageBtn = document.getElementById('gn-score-btn');
 
-    if(thStageBtn.classList.contains('active-b')){
+    if (thStageBtn.classList.contains('active-b')) {
         thStageBtn.classList.remove('active-b');
-    }else if (alStageBtn.classList.contains('active-b')){
+    } else if (alStageBtn.classList.contains('active-b')) {
         alStageBtn.classList.remove('active-b');
     }
     gnStageBtn.classList.add('active-b')
@@ -406,7 +417,7 @@ function thOnBtn() {
     var thOn = document.getElementById('btn-th-on');
     var thOff = document.getElementById('btn-th-off');
 
-    if (thOff.classList.contains('active-b')){
+    if (thOff.classList.contains('active-b')) {
         thOff.classList.remove('active-b');
     }
     thOn.classList.add('active-b')
@@ -423,7 +434,7 @@ function thOffBtn() {
     var thOn = document.getElementById('btn-th-on');
     var thOff = document.getElementById('btn-th-off');
 
-    if (thOn.classList.contains('active-b')){
+    if (thOn.classList.contains('active-b')) {
         thOn.classList.remove('active-b');
     }
     thOff.classList.add('active-b');
@@ -440,7 +451,7 @@ function alOnBtn() {
     var alOn = document.getElementById('btn-al-on');
     var alOff = document.getElementById('btn-al-off');
 
-    if (alOff.classList.contains('active-b')){
+    if (alOff.classList.contains('active-b')) {
         alOff.classList.remove('active-b');
     }
     alOn.classList.add('active-b');
@@ -457,7 +468,7 @@ function alOffBtn() {
     var alOn = document.getElementById('btn-al-on');
     var alOff = document.getElementById('btn-al-off');
 
-    if (alOn.classList.contains('active-b')){
+    if (alOn.classList.contains('active-b')) {
         alOn.classList.remove('active-b');
     }
     alOff.classList.add('active-b');
@@ -474,7 +485,7 @@ function gnOnBtn() {
     var gnOn = document.getElementById('btn-gn-on');
     var gnOff = document.getElementById('btn-gn-off');
 
-    if (gnOff.classList.contains('active-b')){
+    if (gnOff.classList.contains('active-b')) {
         gnOff.classList.remove('active-b');
     }
     gnOn.classList.add('active-b')
@@ -491,7 +502,7 @@ function gnOffBtn() {
     var gnOn = document.getElementById('btn-gn-on');
     var gnOff = document.getElementById('btn-gn-off');
 
-    if (gnOn.classList.contains('active-b')){
+    if (gnOn.classList.contains('active-b')) {
         gnOn.classList.remove('active-b');
     }
     gnOff.classList.add('active-b')
