@@ -1,3 +1,11 @@
+var type= new Typed('.textline',{
+    strings:["Loading....","Please wait....","Image loading....","Score loading....","Result loading...."],
+    typeSpeed:100,
+    backSpeed:100,
+    backDelay:100,
+    cursorChar:"",
+    loop:true
+  })
 // Timer variables
 let countdownValue = 3;
 const countdownElement = document.getElementById('countdown');
@@ -17,7 +25,9 @@ function startCountdown() {
 
       if (!pageLoaded) {
         // If the page is not fully loaded, show the message
-        countdownElement.innerText = "Page should load soon...";
+        //countdownElement.style.fontSize = "20px";
+        countdownElement.innerText = "ക്ഷമ ഈമാന്റെ പകുതിയാണ്";
+        //Good things take time! Your page will load soon.
       } else {
         // If page is already loaded, hide the loader immediately
         document.body.classList.remove('loading');
@@ -58,7 +68,6 @@ const observer = new IntersectionObserver((entries) => {
       removeActiveClasses();
 
       const activeLink = document.querySelector(`a[href="#${id}"]`);
-      console.log(activeLink);
       activeLink.classList.add('open');
     }
   });
@@ -208,7 +217,6 @@ fetch(FULL_URL)
     .then(rep => {
         let data = JSON.parse(rep.substr(47).slice(0, -2));
         let length = data.table.rows.length;//total number of values
-        console.log('data', length)
 
         var table = document.getElementById('day-1');// table selector
 
