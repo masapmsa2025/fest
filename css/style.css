@@ -468,11 +468,11 @@ body:not(.loading) #loader img {
 
 @media(max-width: 499px) {
   .performers-name {
-    font-size: 13px;
+    font-size: 7px;
   }
 
   .performers-job {
-    font-size: 9px;
+    font-size: 6px;
   }
 }
 
