@@ -24,10 +24,7 @@ function startCountdown() {
       clearInterval(interval); // Stop countdown when it reaches 0
 
       if (!pageLoaded) {
-        // If the page is not fully loaded, show the message
-        //countdownElement.style.fontSize = "20px";
-        countdownElement.innerText = "ക്ഷമ ഈമാന്റെ പകുതിയാണ്";
-        //Good things take time! Your page will load soon.
+        countdownElement.innerText = "Good things take time! Your page will load soon.";
       } else {
         // If page is already loaded, hide the loader immediately
         document.body.classList.remove('loading');
