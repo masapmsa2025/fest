@@ -37,7 +37,7 @@ fetch(FULL_URL)
         document.getElementById('team-name2').innerHTML = data.table.cols[1].label;
         document.getElementById('team-name3').innerHTML = data.table.cols[2].label;
         document.getElementById('team-name4').innerHTML = data.table.cols[3].label;
-        if (Render === "render") {
+        if (Render === "norender") {
             document.getElementById('score1').innerHTML = data.table.rows[0].c[0].v;
             document.getElementById('score2').innerHTML = data.table.rows[0].c[1].v;
             document.getElementById('score3').innerHTML = data.table.rows[0].c[2].v;
